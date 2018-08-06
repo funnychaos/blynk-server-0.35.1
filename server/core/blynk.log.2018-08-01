@@ -1,0 +1,817 @@
+16:02:49.947 ERROR - Unknown time-zone ID: Canada/East-xxx (through reference chain: cc.blynk.server.core.model.widgets.others.rtc.RTC["tzName"])
+16:02:50.080 DEBUG - Removing v1 pin data for dashId 1, deviceId 0.
+16:02:50.119 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:50.119 INFO  - DB user : test
+16:02:50.119 INFO  - Connecting to DB...
+16:02:50.123 DEBUG - HikariPool-1 - configuration:
+16:02:50.126 DEBUG - allowPoolSuspension.............false
+16:02:50.126 DEBUG - autoCommit......................false
+16:02:50.126 DEBUG - catalog.........................none
+16:02:50.126 DEBUG - connectionInitSql...............none
+16:02:50.127 DEBUG - connectionTestQuery............."SELECT 1"
+16:02:50.127 DEBUG - connectionTimeout...............30000
+16:02:50.127 DEBUG - dataSource......................none
+16:02:50.127 DEBUG - dataSourceClassName.............none
+16:02:50.127 DEBUG - dataSourceJNDI..................none
+16:02:50.129 DEBUG - dataSourceProperties............{password=<masked>}
+16:02:50.129 DEBUG - driverClassName.................none
+16:02:50.129 DEBUG - healthCheckProperties...........{}
+16:02:50.129 DEBUG - healthCheckRegistry.............none
+16:02:50.129 DEBUG - idleTimeout.....................600000
+16:02:50.129 DEBUG - initializationFailTimeout.......1
+16:02:50.130 DEBUG - isolateInternalQueries..........false
+16:02:50.130 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:50.130 DEBUG - leakDetectionThreshold..........0
+16:02:50.130 DEBUG - maxLifetime.....................0
+16:02:50.130 DEBUG - maximumPoolSize.................5
+16:02:50.130 DEBUG - metricRegistry..................none
+16:02:50.131 DEBUG - metricsTrackerFactory...........none
+16:02:50.131 DEBUG - minimumIdle.....................5
+16:02:50.131 DEBUG - password........................<masked>
+16:02:50.131 DEBUG - poolName........................"HikariPool-1"
+16:02:50.131 DEBUG - readOnly........................false
+16:02:50.132 DEBUG - registerMbeans..................false
+16:02:50.132 DEBUG - scheduledExecutor...............none
+16:02:50.132 DEBUG - schema..........................none
+16:02:50.132 DEBUG - threadFactory...................internal
+16:02:50.133 DEBUG - transactionIsolation............default
+16:02:50.133 DEBUG - username........................"test"
+16:02:50.133 DEBUG - validationTimeout...............5000
+16:02:50.134 INFO  - HikariPool-1 - Starting...
+16:02:51.259 DEBUG - HikariPool-1 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:51.260 DEBUG - HikariPool-1 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.CloneProjectTest.init(CloneProjectTest.java:24) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:52.264 ERROR - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.CloneProjectTest.init(CloneProjectTest.java:24) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:52.266 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:52.274 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:52.274 INFO  - DB user : test
+16:02:52.274 INFO  - Connecting to DB...
+16:02:52.275 DEBUG - HikariPool-2 - configuration:
+16:02:52.276 DEBUG - allowPoolSuspension.............false
+16:02:52.276 DEBUG - autoCommit......................false
+16:02:52.277 DEBUG - catalog.........................none
+16:02:52.277 DEBUG - connectionInitSql...............none
+16:02:52.277 DEBUG - connectionTestQuery............."SELECT 1"
+16:02:52.277 DEBUG - connectionTimeout...............30000
+16:02:52.277 DEBUG - dataSource......................none
+16:02:52.277 DEBUG - dataSourceClassName.............none
+16:02:52.278 DEBUG - dataSourceJNDI..................none
+16:02:52.278 DEBUG - dataSourceProperties............{password=<masked>}
+16:02:52.278 DEBUG - driverClassName.................none
+16:02:52.278 DEBUG - healthCheckProperties...........{}
+16:02:52.278 DEBUG - healthCheckRegistry.............none
+16:02:52.279 DEBUG - idleTimeout.....................600000
+16:02:52.279 DEBUG - initializationFailTimeout.......1
+16:02:52.279 DEBUG - isolateInternalQueries..........false
+16:02:52.279 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:52.279 DEBUG - leakDetectionThreshold..........0
+16:02:52.280 DEBUG - maxLifetime.....................0
+16:02:52.280 DEBUG - maximumPoolSize.................5
+16:02:52.280 DEBUG - metricRegistry..................none
+16:02:52.280 DEBUG - metricsTrackerFactory...........none
+16:02:52.280 DEBUG - minimumIdle.....................5
+16:02:52.281 DEBUG - password........................<masked>
+16:02:52.281 DEBUG - poolName........................"HikariPool-2"
+16:02:52.281 DEBUG - readOnly........................false
+16:02:52.281 DEBUG - registerMbeans..................false
+16:02:52.281 DEBUG - scheduledExecutor...............none
+16:02:52.282 DEBUG - schema..........................none
+16:02:52.282 DEBUG - threadFactory...................internal
+16:02:52.282 DEBUG - transactionIsolation............default
+16:02:52.282 DEBUG - username........................"test"
+16:02:52.282 DEBUG - validationTimeout...............5000
+16:02:52.282 INFO  - HikariPool-2 - Starting...
+16:02:53.300 DEBUG - HikariPool-2 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:53.301 DEBUG - HikariPool-2 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.DBManagerTest.init(DBManagerTest.java:64) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:54.303 ERROR - HikariPool-2 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.DBManagerTest.init(DBManagerTest.java:64) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:54.304 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:54.308 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:54.308 INFO  - DB user : test
+16:02:54.308 INFO  - Connecting to DB...
+16:02:54.308 DEBUG - HikariPool-3 - configuration:
+16:02:54.309 DEBUG - allowPoolSuspension.............false
+16:02:54.309 DEBUG - autoCommit......................false
+16:02:54.309 DEBUG - catalog.........................none
+16:02:54.309 DEBUG - connectionInitSql...............none
+16:02:54.309 DEBUG - connectionTestQuery............."SELECT 1"
+16:02:54.309 DEBUG - connectionTimeout...............30000
+16:02:54.309 DEBUG - dataSource......................none
+16:02:54.310 DEBUG - dataSourceClassName.............none
+16:02:54.310 DEBUG - dataSourceJNDI..................none
+16:02:54.310 DEBUG - dataSourceProperties............{password=<masked>}
+16:02:54.310 DEBUG - driverClassName.................none
+16:02:54.310 DEBUG - healthCheckProperties...........{}
+16:02:54.310 DEBUG - healthCheckRegistry.............none
+16:02:54.310 DEBUG - idleTimeout.....................600000
+16:02:54.311 DEBUG - initializationFailTimeout.......1
+16:02:54.311 DEBUG - isolateInternalQueries..........false
+16:02:54.311 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:54.311 DEBUG - leakDetectionThreshold..........0
+16:02:54.311 DEBUG - maxLifetime.....................0
+16:02:54.311 DEBUG - maximumPoolSize.................5
+16:02:54.311 DEBUG - metricRegistry..................none
+16:02:54.311 DEBUG - metricsTrackerFactory...........none
+16:02:54.311 DEBUG - minimumIdle.....................5
+16:02:54.312 DEBUG - password........................<masked>
+16:02:54.312 DEBUG - poolName........................"HikariPool-3"
+16:02:54.312 DEBUG - readOnly........................false
+16:02:54.312 DEBUG - registerMbeans..................false
+16:02:54.312 DEBUG - scheduledExecutor...............none
+16:02:54.312 DEBUG - schema..........................none
+16:02:54.312 DEBUG - threadFactory...................internal
+16:02:54.312 DEBUG - transactionIsolation............default
+16:02:54.312 DEBUG - username........................"test"
+16:02:54.313 DEBUG - validationTimeout...............5000
+16:02:54.313 INFO  - HikariPool-3 - Starting...
+16:02:55.319 DEBUG - HikariPool-3 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:55.319 DEBUG - HikariPool-3 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.FlashedTokensManagerTest.init(FlashedTokensManagerTest.java:30) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:56.321 ERROR - HikariPool-3 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.FlashedTokensManagerTest.init(FlashedTokensManagerTest.java:30) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:56.322 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:56.328 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:56.328 INFO  - DB user : test
+16:02:56.328 INFO  - Connecting to DB...
+16:02:56.328 DEBUG - HikariPool-4 - configuration:
+16:02:56.329 DEBUG - allowPoolSuspension.............false
+16:02:56.329 DEBUG - autoCommit......................false
+16:02:56.330 DEBUG - catalog.........................none
+16:02:56.330 DEBUG - connectionInitSql...............none
+16:02:56.330 DEBUG - connectionTestQuery............."SELECT 1"
+16:02:56.330 DEBUG - connectionTimeout...............30000
+16:02:56.330 DEBUG - dataSource......................none
+16:02:56.330 DEBUG - dataSourceClassName.............none
+16:02:56.330 DEBUG - dataSourceJNDI..................none
+16:02:56.331 DEBUG - dataSourceProperties............{password=<masked>}
+16:02:56.331 DEBUG - driverClassName.................none
+16:02:56.331 DEBUG - healthCheckProperties...........{}
+16:02:56.331 DEBUG - healthCheckRegistry.............none
+16:02:56.331 DEBUG - idleTimeout.....................600000
+16:02:56.331 DEBUG - initializationFailTimeout.......1
+16:02:56.331 DEBUG - isolateInternalQueries..........false
+16:02:56.331 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:56.332 DEBUG - leakDetectionThreshold..........0
+16:02:56.332 DEBUG - maxLifetime.....................0
+16:02:56.332 DEBUG - maximumPoolSize.................5
+16:02:56.332 DEBUG - metricRegistry..................none
+16:02:56.332 DEBUG - metricsTrackerFactory...........none
+16:02:56.332 DEBUG - minimumIdle.....................5
+16:02:56.332 DEBUG - password........................<masked>
+16:02:56.333 DEBUG - poolName........................"HikariPool-4"
+16:02:56.333 DEBUG - readOnly........................false
+16:02:56.333 DEBUG - registerMbeans..................false
+16:02:56.333 DEBUG - scheduledExecutor...............none
+16:02:56.333 DEBUG - schema..........................none
+16:02:56.333 DEBUG - threadFactory...................internal
+16:02:56.333 DEBUG - transactionIsolation............default
+16:02:56.333 DEBUG - username........................"test"
+16:02:56.334 DEBUG - validationTimeout...............5000
+16:02:56.334 INFO  - HikariPool-4 - Starting...
+16:02:57.340 DEBUG - HikariPool-4 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:57.340 DEBUG - HikariPool-4 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.ForwardingTokenTest.init(ForwardingTokenTest.java:27) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:58.341 ERROR - HikariPool-4 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.ForwardingTokenTest.init(ForwardingTokenTest.java:27) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:02:58.341 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:58.345 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:58.345 INFO  - DB user : test
+16:02:58.345 INFO  - Connecting to DB...
+16:02:58.345 DEBUG - HikariPool-5 - configuration:
+16:02:58.346 DEBUG - allowPoolSuspension.............false
+16:02:58.346 DEBUG - autoCommit......................false
+16:02:58.346 DEBUG - catalog.........................none
+16:02:58.346 DEBUG - connectionInitSql...............none
+16:02:58.347 DEBUG - connectionTestQuery............."SELECT 1"
+16:02:58.347 DEBUG - connectionTimeout...............30000
+16:02:58.347 DEBUG - dataSource......................none
+16:02:58.347 DEBUG - dataSourceClassName.............none
+16:02:58.347 DEBUG - dataSourceJNDI..................none
+16:02:58.347 DEBUG - dataSourceProperties............{password=<masked>}
+16:02:58.347 DEBUG - driverClassName.................none
+16:02:58.347 DEBUG - healthCheckProperties...........{}
+16:02:58.347 DEBUG - healthCheckRegistry.............none
+16:02:58.348 DEBUG - idleTimeout.....................600000
+16:02:58.348 DEBUG - initializationFailTimeout.......1
+16:02:58.348 DEBUG - isolateInternalQueries..........false
+16:02:58.348 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:02:58.348 DEBUG - leakDetectionThreshold..........0
+16:02:58.348 DEBUG - maxLifetime.....................0
+16:02:58.348 DEBUG - maximumPoolSize.................5
+16:02:58.349 DEBUG - metricRegistry..................none
+16:02:58.349 DEBUG - metricsTrackerFactory...........none
+16:02:58.349 DEBUG - minimumIdle.....................5
+16:02:58.349 DEBUG - password........................<masked>
+16:02:58.349 DEBUG - poolName........................"HikariPool-5"
+16:02:58.349 DEBUG - readOnly........................false
+16:02:58.349 DEBUG - registerMbeans..................false
+16:02:58.350 DEBUG - scheduledExecutor...............none
+16:02:58.350 DEBUG - schema..........................none
+16:02:58.350 DEBUG - threadFactory...................internal
+16:02:58.350 DEBUG - transactionIsolation............default
+16:02:58.350 DEBUG - username........................"test"
+16:02:58.350 DEBUG - validationTimeout...............5000
+16:02:58.350 INFO  - HikariPool-5 - Starting...
+16:02:59.367 DEBUG - HikariPool-5 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:02:59.367 DEBUG - HikariPool-5 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.RawDataDBTest.init(RawDataDBTest.java:40) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:03:00.369 ERROR - HikariPool-5 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.RawDataDBTest.init(RawDataDBTest.java:40) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:03:00.369 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:03:00.374 INFO  - DB url : jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:03:00.374 INFO  - DB user : test
+16:03:00.374 INFO  - Connecting to DB...
+16:03:00.374 DEBUG - HikariPool-6 - configuration:
+16:03:00.375 DEBUG - allowPoolSuspension.............false
+16:03:00.375 DEBUG - autoCommit......................false
+16:03:00.375 DEBUG - catalog.........................none
+16:03:00.375 DEBUG - connectionInitSql...............none
+16:03:00.375 DEBUG - connectionTestQuery............."SELECT 1"
+16:03:00.375 DEBUG - connectionTimeout...............30000
+16:03:00.376 DEBUG - dataSource......................none
+16:03:00.376 DEBUG - dataSourceClassName.............none
+16:03:00.376 DEBUG - dataSourceJNDI..................none
+16:03:00.376 DEBUG - dataSourceProperties............{password=<masked>}
+16:03:00.376 DEBUG - driverClassName.................none
+16:03:00.376 DEBUG - healthCheckProperties...........{}
+16:03:00.376 DEBUG - healthCheckRegistry.............none
+16:03:00.376 DEBUG - idleTimeout.....................600000
+16:03:00.376 DEBUG - initializationFailTimeout.......1
+16:03:00.376 DEBUG - isolateInternalQueries..........false
+16:03:00.376 DEBUG - jdbcUrl.........................jdbc:postgresql://localhost:5432/blynk?tcpKeepAlive=true&socketTimeout=150
+16:03:00.376 DEBUG - leakDetectionThreshold..........0
+16:03:00.376 DEBUG - maxLifetime.....................0
+16:03:00.376 DEBUG - maximumPoolSize.................5
+16:03:00.377 DEBUG - metricRegistry..................none
+16:03:00.377 DEBUG - metricsTrackerFactory...........none
+16:03:00.377 DEBUG - minimumIdle.....................5
+16:03:00.377 DEBUG - password........................<masked>
+16:03:00.377 DEBUG - poolName........................"HikariPool-6"
+16:03:00.377 DEBUG - readOnly........................false
+16:03:00.377 DEBUG - registerMbeans..................false
+16:03:00.377 DEBUG - scheduledExecutor...............none
+16:03:00.377 DEBUG - schema..........................none
+16:03:00.377 DEBUG - threadFactory...................internal
+16:03:00.377 DEBUG - transactionIsolation............default
+16:03:00.377 DEBUG - username........................"test"
+16:03:00.377 DEBUG - validationTimeout...............5000
+16:03:00.378 INFO  - HikariPool-6 - Starting...
+16:03:01.392 DEBUG - HikariPool-6 - Failed to create/setup connection: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:03:01.392 DEBUG - HikariPool-6 - Cannot acquire connection from data source
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.RealtimeStatsDBTest.init(RealtimeStatsDBTest.java:40) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:03:02.394 ERROR - HikariPool-6 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:245) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:452) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.Driver.connect(Driver.java:254) ~[postgresql-42.2.2.jar:42.2.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:367) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:196) ~[HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.1.0.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-3.1.0.jar:?]
+	at cc.blynk.server.db.DBManager.<init>(DBManager.java:91) [classes/:?]
+	at cc.blynk.server.db.RealtimeStatsDBTest.init(RealtimeStatsDBTest.java:40) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160) [surefire-junit4-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119) [surefire-booter-2.20.1.jar:2.20.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407) [surefire-booter-2.20.1.jar:2.20.1]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_131]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_131]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:69) ~[postgresql-42.2.2.jar:42.2.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:156) ~[postgresql-42.2.2.jar:42.2.2]
+	... 32 more
+16:03:02.394 ERROR - Not able connect to DB. Skipping. Reason : Failed to initialize pool: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+16:03:02.416 INFO  - Using data dir 'C:\Users\ADMINI~1\AppData\Local\Temp\blynk'
+16:03:02.439 DEBUG - Starting reading user DB.
+16:03:02.459 DEBUG - Reading user DB finished.
+16:03:02.482 INFO  - Using data dir 'C:\Users\ADMINI~1\AppData\Local\Temp\blynk'
+16:03:02.493 DEBUG - Starting reading user DB.
+16:03:02.495 DEBUG - Reading user DB finished.
+16:03:02.514 INFO  - Using data dir 'C:\Users\ADMINI~1\AppData\Local\Temp\blynk'
+16:03:02.530 INFO  - Using data dir 'C:\Users\ADMINI~1\AppData\Local\Temp\blynk'
+16:03:02.538 DEBUG - Starting reading user DB.
+16:03:02.541 DEBUG - Reading user DB finished.
+16:03:02.560 INFO  - Using data dir 'C:\Users\ADMINI~1\AppData\Local\Temp\blynk'

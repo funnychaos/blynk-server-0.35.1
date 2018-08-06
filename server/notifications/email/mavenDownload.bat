@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=D:\javase-2.2.0.jar -DgroupId=com.github.kenglxn.qrgen -DartifactId=javase -Dversion=2.2.0 -Dpackaging=jar
