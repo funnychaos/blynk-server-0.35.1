@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="acme" />
+        <module name="core" />
+        <module name="email" />
+        <module name="http-admin" />
+        <module name="http-api" />
+        <module name="http-core" />
+        <module name="launcher" />
+        <module name="push" />
+        <module name="sms" />
+        <module name="tcp-app-server" />
+        <module name="tcp-hardware-server" />
+        <module name="tools" />
+        <module name="twitter" />
+        <module name="utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="acme" target="${target}" />
+      <module name="blynk-server-0.35.1" target="${target}" />
+      <module name="blynk-server-0.35.14" target="${target}" />
+      <module name="client" target="${target}" />
+      <module name="core" target="${target}" />
+      <module name="email" target="${target}" />
+      <module name="http-admin" target="${target}" />
+      <module name="http-api" target="${target}" />
+      <module name="http-core" target="${target}" />
+      <module name="integration-tests" target="${target}" />
+      <module name="launcher" target="${target}" />
+      <module name="notifications" target="${target}" />
+      <module name="push" target="${target}" />
+      <module name="server" target="${target}" />
+      <module name="sms" target="${target}" />
+      <module name="tcp-app-server" target="${target}" />
+      <module name="tcp-hardware-server" target="${target}" />
+      <module name="tools" target="${target}" />
+      <module name="twitter" target="${target}" />
+      <module name="utils" target="${target}" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

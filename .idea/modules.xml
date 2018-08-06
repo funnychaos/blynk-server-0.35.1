@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/server/acme/acme.iml" filepath="$PROJECT_DIR$/server/acme/acme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blynk-server-0.35.1.iml" filepath="$PROJECT_DIR$/blynk-server-0.35.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/core/core.iml" filepath="$PROJECT_DIR$/server/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/notifications/email/email.iml" filepath="$PROJECT_DIR$/server/notifications/email/email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/http-admin/http-admin.iml" filepath="$PROJECT_DIR$/server/http-admin/http-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/http-api/http-api.iml" filepath="$PROJECT_DIR$/server/http-api/http-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/http-core/http-core.iml" filepath="$PROJECT_DIR$/server/http-core/http-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/launcher/launcher.iml" filepath="$PROJECT_DIR$/server/launcher/launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/notifications/push/push.iml" filepath="$PROJECT_DIR$/server/notifications/push/push.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/notifications/sms/sms.iml" filepath="$PROJECT_DIR$/server/notifications/sms/sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/tcp-app-server/tcp-app-server.iml" filepath="$PROJECT_DIR$/server/tcp-app-server/tcp-app-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/tcp-hardware-server/tcp-hardware-server.iml" filepath="$PROJECT_DIR$/server/tcp-hardware-server/tcp-hardware-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/tools/tools.iml" filepath="$PROJECT_DIR$/server/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/notifications/twitter/twitter.iml" filepath="$PROJECT_DIR$/server/notifications/twitter/twitter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/utils/utils.iml" filepath="$PROJECT_DIR$/server/utils/utils.iml" />
+    </modules>
+  </component>
+</project>

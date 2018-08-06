@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="utils-0.35.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/server/utils/target/utils-0.35.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cc/blynk/utils/utils/0.35.1/utils-0.35.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

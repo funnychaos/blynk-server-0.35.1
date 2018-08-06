@@ -1,0 +1,19 @@
+language: java
+
+addons:
+  postgresql: "9.5"
+  apt:
+    packages:
+      - oracle-java9-installer
+
+jdk:
+  - oraclejdk9
+
+services:
+  - postgresql
+
+before_script:
+  - psql -f $TRAVIS_BUILD_DIR/server/core/src/main/resources/create_schema.sql -U postgres
+
+script:
+  - mvn clean test

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="utils-0.35.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/server/utils/target/utils-0.35.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

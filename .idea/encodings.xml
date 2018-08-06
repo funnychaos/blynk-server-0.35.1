@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/integration-tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/acme" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/http-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/http-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/http-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/launcher" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/notifications" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/notifications/email" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/notifications/push" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/notifications/sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/notifications/twitter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/tcp-app-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/tcp-hardware-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/utils" charset="UTF-8" />
+  </component>
+</project>
